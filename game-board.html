@@ -12,46 +12,48 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="game-board.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="game timer/timer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/game-board.css" />
 
 </head>
 
-<body>
+<body class="bg-body">
     <main class="container">
         <div class=" game-container">
+
             <div class="game-bar">
-                <div>
-                    <div class="timer-container">
-                        <div id="display" class="timer-display">
-                            00:00:00
-                        </div>
-                        <div class=" buttons">
-                            <i class="fas fa-play-circle" id="startStop" onclick="startStop()"></i>
-                            <i class="fas fa-power-off" id="reset" onclick="reset()"></i>
-                        </div>
+                <div class="timer-container">
+                    <div id="display" class="timer-display">
+                        00:00:00
                     </div>
-                    <span class="points">Points</span>
+                    <div class="buttons">
+                        <i class="fas fa-play-circle" id="startStop" onclick="startStop()"></i>
+                        <i class="fas fa-power-off" id="reset" onclick="reset()"></i>
+                    </div>
                 </div>
+                <div>punkty</div>
             </div>
+
+
+
+
             <div class="container-game-board">
                 <div class="game-board">
-                    <div class="wall"></div>
-                    <div class="gamer">
+                    <div class="wall game-element"></div>
+                    <div class="gamer game-element">
                         <i class="fas fa-grin-beam"></i>
                     </div>
-                    <div class="enemy">
+                    <div class="enemy game-element">
                         <i class="fas fa-poo"></i>
                     </div>
-                    <div class="food">
+                    <div class="food game-element">
                         <i class="fas fa-beer"></i>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <script src="main.js"></script>
-    <script src="game timer/timer.js"></script>
+    <script src="game-board.js"></script>
+    <script src="script/timer.js"></script>
 </body>
 
 </html>
